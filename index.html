@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Προσκλητήριο Γάμου - Βασίλης & Κατερίνα</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Marck+Script&family=Playball&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <style>
         body {
             margin: 0;
@@ -18,9 +19,9 @@
         }
 
         .invitation-card {
+            /* Αναλογία 4:5 */
             width: 600px;
-            height: 850px;
-            /* ΠΡΟΣΟΧΗ: Εδώ βάζεις το όνομα της εικόνας σου */
+            aspect-ratio: 4 / 5;
             background-image: url('background.jpg'); 
             background-size: cover;
             background-position: center;
@@ -29,13 +30,14 @@
             padding: 40px;
             box-sizing: border-box;
             color: #444;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        /* Ονόματα Πάνω Δεξιά */
         .header-names {
             text-align: right;
-            margin-top: 20px;
-            margin-right: 10px;
+            margin-top: 10px;
         }
 
         .name {
@@ -43,41 +45,40 @@
             font-size: 3.8rem;
             color: #8b0000;
             margin: 0;
-            line-height: 0.5;
+            line-height: 0.8;
         }
 
         .and-symbol {
             font-family: 'Playball', cursive;
             font-size: 2.2rem;
             color: #8b0000;
-            margin: 0 40px 0 0;
+            margin: 5px 40px 5px 0;
             display: block;
         }
 
-        /* Κεντρικό Μέρος */
         .main-content {
             text-align: center;
-            margin-top: 60px; /* Απόσταση από τα τριαντάφυλλα */
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .invite-text {
             font-size: 1.3rem;
             letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 5px;
-            font-weight: 400;
+            margin-bottom: 10px;
         }
 
-        /* Ημερομηνία με ελάχιστο κενό */
         .date-section {
-            margin: 0;
-            line-height: 1.5;
+            line-height: 1.4;
+            margin-bottom: 20px;
         }
 
         .date-line {
-            font-size: 1.3rem;
-            letter-spacing: 3px;
-            font-weight: 300;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
             display: block;
         }
 
@@ -85,58 +86,90 @@
             font-size: 4rem;
             font-weight: 600;
             color: #8b0000;
-            margin: 2px 0;
+            margin: 5px 0;
             display: block;
         }
 
-        /* Οικογένειες, Κουμπάρος */
         .people-row {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            margin-top: 30px;
-            padding: 0 5px;
+            gap: 10px;
+            margin-top: 10px;
         }
 
         .family, .koumbaros {
             flex: 1;
-            font-size: 1.3rem;
-            line-height: 1.4;
-        }
-
-        .koumbaros {
-            padding: 0 10px;
+            font-size: 1rem;
+            line-height: 1.2;
         }
 
         .label {
             font-weight: 600;
             font-size: 0.65rem;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
             color: #8b0000;
             margin-bottom: 5px;
             text-transform: uppercase;
         }
 
-        /* Footer */
         .footer-info {
             text-align: center;
-            margin-top: 30px;
             border-top: 1px solid rgba(139, 0, 0, 0.1);
             padding-top: 15px;
+            margin-top: 10px;
         }
 
         .reception {
             font-family: 'Marck Script', cursive;
             font-size: 1.8rem;
             color: #8b0000;
-            margin: 0 0 8px 0;
+            margin: 0 0 5px 0;
         }
 
         .rsvp {
-            font-size: 0.9rem;
-            letter-spacing: 1px;
+            font-size: 0.8rem;
             color: #444;
-            text-transform: uppercase;
+            line-height: 1.3;
+        }
+
+        /* --- MEDIA QUERIES ΓΙΑ ΚΙΝΗΤΑ --- */
+        @media screen and (max-width: 600px) {
+            .invitation-card {
+                width: 95vw;
+                height: auto;
+                aspect-ratio: auto; /* Επιτρέπουμε να μακρύνει αν χρειαστεί */
+                min-height: 90vh;
+                padding: 25px 15px;
+            }
+
+            .name {
+                font-size: 2.5rem;
+            }
+
+            .date-number {
+                font-size: 3rem;
+            }
+
+            .invite-text, .date-line {
+                font-size: 1rem;
+            }
+
+            .people-row {
+                flex-direction: column; /* Στο κινητό μπαίνουν το ένα κάτω από το άλλο */
+                gap: 15px;
+            }
+
+            .family, .koumbaros {
+                font-size: 0.95rem;
+            }
+
+            .reception {
+                font-size: 1.5rem;
+            }
+
+            .rsvp {
+                font-size: 0.75rem;
+            }
         }
     </style>
 </head>
@@ -150,14 +183,13 @@
         </div>
 
         <div class="main-content">
-            <p class="invite-text">Σας προσκαλούμε στον γάμο μας </p>
+            <p class="invite-text">Σας προσκαλούμε στον γάμο μας</p>
             
             <div class="date-section">
                 <span class="date-line">ΚΥΡΙΑΚΗ</span>
                 <span class="date-number">19</span>
                 <span class="date-line">ΙΟΥΛΙΟΥ 2026 | 20:00</span>
-                <span class="date-line">στον ΙΕΡΟ ΝΑΟ ΑΓΙΟΥ ΔΗΜΗΤΡΙΟ ΠΑΡΑΒΟΛΑΣ </span>
-
+                <span class="date-line">στον ΙΕΡΟ ΝΑΟ ΑΓΙΟΥ ΔΗΜΗΤΡΙΟΥ ΠΑΡΑΒΟΛΑΣ</span>
             </div>
 
             <div class="people-row">
@@ -179,7 +211,7 @@
 
             <div class="footer-info">
                 <p class="reception">Θα ακολουθήσει δεξίωση στο Κτήμα "Lofos Gala"</p>
-                <p class="rsvp">Ενημερώστε μας για την παρουσία σας έως 01/07 στο 6985858421 (Κατερίνα) και 6977903801(Βασίλης)</p>
+                <p class="rsvp">Ενημερώστε μας για την παρουσία σας έως 01/07 στα:<br>6985858421 (Κατερίνα) & 6977903801 (Βασίλης)</p>
             </div>
         </div>
     </div>
