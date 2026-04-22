@@ -133,89 +133,98 @@
         }
 
         /* --- MEDIA QUERIES ΓΙΑ ΚΙΝΗΤΑ --- */
+       /* --- ΤΕΛΙΚΗ ΔΙΟΡΘΩΣΗ ΓΙΑ ΝΑ ΧΩΡΑΝΕ ΤΑ ΓΡΑΜΜΑΤΑ --- */
         @media screen and (max-width: 600px) {
             body {
-                background-color: #fff; /* Καθαρό φόντο για να μη φαίνονται περιθώρια */
+                background-color: #f4f1ea;
+                align-items: flex-start; /* Ξεκινάει από την κορυφή για να μη χάνεται το κάτω μέρος */
+                padding-top: 10px;
             }
 
             .invitation-card {
-                width: 100vw; /* Πιάνει όλο το πλάτος της οθόνης */
-                height: 125vw; /* Διατηρεί την αναλογία 4:5 βάσει πλάτους */
-                aspect-ratio: 4 / 5;
-                padding: 20px 10px; /* Λιγότερο padding για να κερδίσουμε χώρο */
-                box-shadow: none; /* Αφαιρούμε τη σκιά για να κολλήσει στην οθόνη */
-                
-                /* Διορθώνουμε την εικόνα να φαίνεται από αριστερά */
-                background-position: left center; 
+                width: 100vw; 
+                height: 125vw; /* Αυστηρή αναλογία 4:5 για να μη βγαίνουν τα γράμματα */
+                padding: 15px 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between; /* Μοιράζει το περιεχόμενο ακριβώς στα όρια */
+                box-shadow: none;
+                background-position: left center;
                 background-size: cover;
             }
 
             .header-names {
-                margin-top: 5px;
+                margin-top: 0;
                 margin-right: 5px;
             }
 
             .name {
-                font-size: 2.2rem;
+                font-size: 1.8rem; /* Μίκρυναν για να κερδίσουμε χώρο */
             }
 
             .and-symbol {
-                font-size: 1.5rem;
-                margin-right: 25px;
+                font-size: 1.2rem;
+                margin-right: 20px;
             }
 
             .main-content {
-                margin-top: 20px;
+                margin-top: 5px; /* Ελάχιστο κενό πάνω */
             }
 
             .invite-text {
-                font-size: 0.9rem;
+                font-size: 0.75rem;
+                margin-bottom: 2px;
+            }
+
+            .date-section {
+                margin: 5px 0;
+                line-height: 1.1;
             }
 
             .date-number {
-                font-size: 2.8rem;
+                font-size: 2.3rem; /* Μίκρυνε η ημερομηνία */
+                margin: 2px 0;
             }
 
             .date-line {
-                font-size: 0.8rem;
-                letter-spacing: 1px;
+                font-size: 0.7rem;
             }
 
-            /* Επαναφορά σε μία σειρά (Οριζόντια) */
+            /* Οικογένειες - Πιο μαζεμένες */
             .people-row {
                 display: flex;
-                flex-direction: row; /* Οριζόντια ξανά */
-                justify-content: space-between;
-                gap: 5px;
-                margin-top: 15px;
+                flex-direction: row;
+                gap: 2px;
+                margin-top: 5px;
             }
 
             .family, .koumbaros {
-                font-size: 0.65rem; /* Πολύ μικρότερο font για να χωρέσουν δίπλα-δίπλα */
-                line-height: 1.1;
-                flex: 1;
+                font-size: 0.58rem; /* Το μικρότερο δυνατό για να είναι σε μια σειρά */
+                line-height: 1;
             }
 
             .label {
-                font-size: 0.5rem;
-                margin-bottom: 3px;
+                font-size: 0.45rem;
+                margin-bottom: 2px;
             }
 
+            /* Footer - Χωρίς περιττά κενά */
             .footer-info {
-                margin-top: 10px;
-                padding-top: 10px;
+                margin-top: 5px;
+                padding-top: 5px;
             }
 
             .reception {
-                font-size: 1.3rem;
+                font-size: 1.1rem;
+                margin-bottom: 2px;
             }
 
             .rsvp {
-                font-size: 0.6rem;
-                line-height: 1.2;
+                font-size: 0.55rem;
+                line-height: 1.1;
             }
-        }
-        }
+        
+          }
     </style>
 </head>
 <body>
