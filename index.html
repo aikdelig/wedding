@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Προσκλητήριο Γάμου - Βασίλης & Κατερίνα</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Caveat Brush', sans-serif;
+            background-color: #f4f1ea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .invitation-card {
+            width: 600px;
+            height: 850px;
+            /* ΠΡΟΣΟΧΗ: Εδώ βάζεις το όνομα της εικόνας σου */
+            background-image: url('background.jpg'); 
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            padding: 40px;
+            box-sizing: border-box;
+            color: #444;
+        }
+
+        /* Ονόματα Πάνω Δεξιά */
+        .header-names {
+            text-align: right;
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+
+        .name {
+            font-family: 'Playball', cursive;
+            font-size: 3.8rem;
+            color: #8b0000;
+            margin: 0;
+            line-height: 0.5;
+        }
+
+        .and-symbol {
+            font-family: 'Playball', cursive;
+            font-size: 2.2rem;
+            color: #8b0000;
+            margin: 0 40px 0 0;
+            display: block;
+        }
+
+        /* Κεντρικό Μέρος */
+        .main-content {
+            text-align: center;
+            margin-top: 60px; /* Απόσταση από τα τριαντάφυλλα */
+        }
+
+        .invite-text {
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            font-weight: 400;
+        }
+
+        /* Ημερομηνία με ελάχιστο κενό */
+        .date-section {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .date-line {
+            font-size: 1.3rem;
+            letter-spacing: 3px;
+            font-weight: 300;
+            display: block;
+        }
+
+        .date-number {
+            font-size: 4rem;
+            font-weight: 600;
+            color: #8b0000;
+            margin: 2px 0;
+            display: block;
+        }
+
+        /* Οικογένειες, Κουμπάρος */
+        .people-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 30px;
+            padding: 0 5px;
+        }
+
+        .family, .koumbaros {
+            flex: 1;
+            font-size: 1.3rem;
+            line-height: 1.4;
+        }
+
+        .koumbaros {
+            padding: 0 10px;
+        }
+
+        .label {
+            font-weight: 600;
+            font-size: 0.65rem;
+            letter-spacing: 1.5px;
+            color: #8b0000;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        /* Footer */
+        .footer-info {
+            text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid rgba(139, 0, 0, 0.1);
+            padding-top: 15px;
+        }
+
+        .reception {
+            font-family: 'Marck Script', cursive;
+            font-size: 1.8rem;
+            color: #8b0000;
+            margin: 0 0 8px 0;
+        }
+
+        .rsvp {
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            color: #444;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="invitation-card">
+        <div class="header-names">
+            <h1 class="name">Βασίλης</h1>
+            <span class="and-symbol">&</span>
+            <h1 class="name">Κατερίνα</h1>
+        </div>
+
+        <div class="main-content">
+            <p class="invite-text">Σας προσκαλούμε στον γάμο μας </p>
+            
+            <div class="date-section">
+                <span class="date-line">ΚΥΡΙΑΚΗ</span>
+                <span class="date-number">19</span>
+                <span class="date-line">ΙΟΥΛΙΟΥ 2026 | 20:00</span>
+                <span class="date-line">στον ΙΕΡΟ ΝΑΟ ΑΓΙΟΥ ΔΗΜΗΤΡΙΟ ΠΑΡΑΒΟΛΑΣ </span>
+
+            </div>
+
+            <div class="people-row">
+                <div class="family">
+                    <p class="label">ΟΙΚΟΓΕΝΕΙΑ ΓΑΜΠΡΟΥ</p>
+                    <p>Κωνσταντίνου & Θεοδώρας<br>Κοκόση</p>
+                </div>
+                
+                <div class="koumbaros">
+                    <p class="label">ΟΙ ΚΟΥΜΠΑΡΟΙ</p>
+                    <p>Στέλιος & Ρούλα<br>Δεληγιάννη</p>
+                </div>
+
+                <div class="family">
+                    <p class="label">ΟΙΚΟΓΕΝΕΙΑ ΝΥΦΗΣ</p>
+                    <p>Βασιλείου & Χρυσάνθης<br>Δεληγιάννη</p>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <p class="reception">Θα ακολουθήσει δεξίωση στο Κτήμα "Lofos Gala"</p>
+                <p class="rsvp">Ενημερώστε μας για την παρουσία σας έως 01/07 στο 6985858421 (Κατερίνα) και 6977903801(Βασίλης)</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
