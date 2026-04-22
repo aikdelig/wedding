@@ -134,42 +134,87 @@
 
         /* --- MEDIA QUERIES ΓΙΑ ΚΙΝΗΤΑ --- */
         @media screen and (max-width: 600px) {
+            body {
+                background-color: #fff; /* Καθαρό φόντο για να μη φαίνονται περιθώρια */
+            }
+
             .invitation-card {
-                width: 95vw;
-                height: auto;
-                aspect-ratio: auto; /* Επιτρέπουμε να μακρύνει αν χρειαστεί */
-                min-height: 90vh;
-                padding: 25px 15px;
+                width: 100vw; /* Πιάνει όλο το πλάτος της οθόνης */
+                height: 125vw; /* Διατηρεί την αναλογία 4:5 βάσει πλάτους */
+                aspect-ratio: 4 / 5;
+                padding: 20px 10px; /* Λιγότερο padding για να κερδίσουμε χώρο */
+                box-shadow: none; /* Αφαιρούμε τη σκιά για να κολλήσει στην οθόνη */
+                
+                /* Διορθώνουμε την εικόνα να φαίνεται από αριστερά */
+                background-position: left center; 
+                background-size: cover;
+            }
+
+            .header-names {
+                margin-top: 5px;
+                margin-right: 5px;
             }
 
             .name {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
+            }
+
+            .and-symbol {
+                font-size: 1.5rem;
+                margin-right: 25px;
+            }
+
+            .main-content {
+                margin-top: 20px;
+            }
+
+            .invite-text {
+                font-size: 0.9rem;
             }
 
             .date-number {
-                font-size: 3rem;
+                font-size: 2.8rem;
             }
 
-            .invite-text, .date-line {
-                font-size: 1rem;
+            .date-line {
+                font-size: 0.8rem;
+                letter-spacing: 1px;
             }
 
+            /* Επαναφορά σε μία σειρά (Οριζόντια) */
             .people-row {
-                flex-direction: column; /* Στο κινητό μπαίνουν το ένα κάτω από το άλλο */
-                gap: 15px;
+                display: flex;
+                flex-direction: row; /* Οριζόντια ξανά */
+                justify-content: space-between;
+                gap: 5px;
+                margin-top: 15px;
             }
 
             .family, .koumbaros {
-                font-size: 0.95rem;
+                font-size: 0.65rem; /* Πολύ μικρότερο font για να χωρέσουν δίπλα-δίπλα */
+                line-height: 1.1;
+                flex: 1;
+            }
+
+            .label {
+                font-size: 0.5rem;
+                margin-bottom: 3px;
+            }
+
+            .footer-info {
+                margin-top: 10px;
+                padding-top: 10px;
             }
 
             .reception {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
             }
 
             .rsvp {
-                font-size: 0.75rem;
+                font-size: 0.6rem;
+                line-height: 1.2;
             }
+        }
         }
     </style>
 </head>
